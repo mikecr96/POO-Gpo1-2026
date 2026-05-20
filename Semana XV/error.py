@@ -1,17 +1,18 @@
 diccionario = {
     1: 'Miguel',
-    2: 'Ángel',
-    3: 'Max',
-    4: 'Diego'
+    2: 'Randal',
+    3: 'Axel',
+    4: 'Jacobo',
+    5: 'Antonio'
 }
+if True == True:
+    exit("404")
 
-# Errores propios solo heredan de Exception
-class FaltaMoneyError(Exception):
+# Errores propios heredan de Exception y están vacíos
+class PobreError(Exception):
     pass
+# print(dir(Exception))
+# print(KeyError.mro())
 
-# try:
-#     print(diccionario[10])
-# except KeyError:
-#     print("Esa llave no existe.")
-# PASAN COSITAS...
-raise FaltaMoneyError('Te falta money, chavo.')
+# AQUÍ PASAN COSITAS...
+raise PobreError('Eres pobre, no te alcanza')
